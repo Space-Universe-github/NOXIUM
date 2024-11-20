@@ -31,6 +31,7 @@
       background: #161b22; /* Slightly lighter black for contrast */
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
 
     .container:hover {
@@ -61,22 +62,38 @@
       margin: 0 auto 20px auto;
     }
 
-    .progress-bar::after {
+    .progress-bar::before {
       content: '';
       display: block;
       position: absolute;
       top: 0;
       left: 0;
-      width: 30%; /* Initial load percentage */
+      width: 45%; /* Stop progress at this point */
       height: 100%;
       background: linear-gradient(90deg, #58a6ff, #1f6feb);
-      animation: progress-animation 4s infinite ease-in-out;
     }
 
-    @keyframes progress-animation {
-      0% { width: 0%; }
-      50% { width: 70%; }
-      100% { width: 100%; }
+    /* Tooltip */
+    .tooltip {
+      position: absolute;
+      left: 45%; /* Align with the progress */
+      bottom: -35px;
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border: 1px solid #21262d;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .progress-bar:hover .tooltip {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Footer details */
@@ -116,7 +133,9 @@
   <div class="container">
     <h1>🚧 Work in Progress 🚧</h1>
     <p>Crafting something exciting for you. Stay tuned, and we’ll be live soon.</p>
-    <div class="progress-bar"></div>
+    <div class="progress-bar">
+      <div class="tooltip">Build the work in progress page XD</div>
+    </div>
     <div class="footer">
       Built with ❤️ for devs. Check back soon or follow us on <a href="#">GitHub</a>.
     </div>
