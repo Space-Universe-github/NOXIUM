@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space's Bio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Roboto Mono', monospace;
+      background: #0d1117; /* Sleek black background */
+      color: #c9d1d9; /* Subtle off-white text */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #58a6ff, #1f6feb);
+      padding: 15px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0d1117;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .nav-links a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #0d1117;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      background: #0d1117;
+      color: #58a6ff;
+    }
+
+    /* Main container */
+    .container {
+      position: relative;
+      max-width: 800px;
+      padding: 30px;
+      margin: 50px auto;
+      border: 1px solid #21262d; /* Slight border for elegance */
+      border-radius: 10px;
+      background: #161b22; /* Slightly lighter black for contrast */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Subtle neon border for hover */
+    .container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background: linear-gradient(180deg, rgba(88,166,255,0.3), rgba(31,111,235,0.3));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #58a6ff; /* Vibrant blue accent */
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #8b949e;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #1f6feb;
+    }
+
+    /* Footer styles */
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #6e7681;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #1f6feb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Nøxium</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="copyright.html">Copyright</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Space's Bio</h1>
+    <p>
+      I am a game developer and the founder of <strong>Nøxium Studio</strong>, a Roblox game development studio dedicated to creating fun, engaging experiences that prioritize players over profit. With a strong foundation in coding and game direction, I lead my team to craft captivating narratives and innovative gameplay, ensuring that every project is driven by creativity and community values.
+    </p>
+    <p>
+      Nøxium’s focus is on mini-games, adventure games, and indie games, all designed with the core belief that gaming should be about enjoyment, not exploitation. We reject pay-to-win mechanics, RNG gimmicks, and excessive microtransactions, and instead develop games that evolve with meaningful updates, shaped by direct feedback from our players.
+    </p>
+    <p>
+      In the next five years, I envision Nøxium Studio as a widely recognized name in the gaming community, loved for its commitment to quality, fairness, and innovation. Our team collaboration thrives on flexibility and consensus, allowing us to adapt our workflows to support each individual’s strengths and creativity.
+    </p>
+    <p>
+      Outside of game development, I’m passionate about <strong>photography</strong> and <strong>cinematography</strong>, which influence my approach to visual storytelling. With nearly 800 followers on Twitter, I enjoy sharing insights, connecting with fellow developers, and showcasing the journey of game creation.
+    </p>
+    <p>
+      As both a developer and studio owner, my mission is to create unique, memorable experiences that resonate with players and foster a vibrant, inclusive community.
+    </p>
+    <p>
+      You can find me on <a href="https://twitter.com/spaceuniverse__" target="_blank">Twitter (@spaceuniverse__)</a> or on <a href="https://sillycatboys.site" target="_blank">Bluesky (sillycatboys.site)</a>.
+    </p>
+
+    <div class="footer">
+      <a href="index.html">Return to Home</a>
+    </div>
+  </div>
+</body>
+</html>
