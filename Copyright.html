@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nøxium - Copyright</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Roboto Mono', monospace;
+      background: #0d1117; /* Sleek black background */
+      color: #c9d1d9; /* Subtle off-white text */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Main container */
+    .container {
+      position: relative;
+      max-width: 600px;
+      padding: 30px;
+      border: 1px solid #21262d; /* Slight border for elegance */
+      border-radius: 10px;
+      background: #161b22; /* Slightly lighter black for contrast */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Subtle neon border for hover */
+    .container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background: linear-gradient(180deg, rgba(88,166,255,0.3), rgba(31,111,235,0.3));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #58a6ff; /* Vibrant blue accent */
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #8b949e;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #1f6feb;
+    }
+
+    /* Footer styles */
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #6e7681;
+    }
+
+    .footer a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #1f6feb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Copyright Information</h1>
+    <p>
+      © 2024 Nøxium. All rights reserved. No part of this website or its content may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the owner.
+    </p>
+    <div class="footer">
+      <a href="index.html">Return to Home</a>
+    </div>
+  </div>
+</body>
+</html>
