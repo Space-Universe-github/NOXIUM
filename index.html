@@ -6,58 +6,71 @@
   <title>Work in Progress</title>
   <style>
     /* Reset */
-    body, html {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
     }
 
-    /* Background styling */
-    body {
+    body, html {
+      height: 100%;
+      font-family: 'Roboto Mono', monospace;
+      background: #0d1117; /* Sleek black background */
+      color: #c9d1d9; /* Subtle off-white text */
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #ff7eb3, #ff758c);
-      color: #fff;
-      text-align: center;
     }
 
-    /* Container for content */
     .container {
+      text-align: center;
       max-width: 600px;
-      padding: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 30px;
+      border: 1px solid #21262d; /* Slight border for elegance */
       border-radius: 10px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-      background: rgba(255, 255, 255, 0.1);
+      background: #161b22; /* Slightly lighter black for contrast */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
     }
 
     h1 {
-      font-size: 3rem;
-      margin: 0 0 20px;
+      font-size: 2.5rem;
+      color: #58a6ff; /* Vibrant blue accent */
+      margin-bottom: 15px;
     }
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 20px;
+      color: #8b949e;
+      margin-bottom: 30px;
     }
 
-    /* Progress bar styling */
+    /* Progress bar */
     .progress-bar {
-      width: 100%;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      overflow: hidden;
       position: relative;
+      width: 100%;
+      height: 8px;
+      background: #21262d;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 0 auto 20px auto;
     }
 
-    .progress {
+    .progress-bar::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%; /* Initial load percentage */
       height: 100%;
-      background: rgba(255, 255, 255, 0.7);
-      animation: progress-animation 4s infinite;
+      background: linear-gradient(90deg, #58a6ff, #1f6feb);
+      animation: progress-animation 4s infinite ease-in-out;
     }
 
     @keyframes progress-animation {
@@ -66,39 +79,47 @@
       100% { width: 100%; }
     }
 
-    /* Button styles */
-    .notify-btn {
-      display: inline-block;
+    /* Footer details */
+    .footer {
       margin-top: 20px;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.8);
-      color: #ff758c;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
+      font-size: 0.9rem;
+      color: #6e7681;
     }
 
-    .notify-btn:hover {
-      background: #fff;
+    .footer a {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #1f6feb;
+    }
+
+    /* Subtle neon border for hover */
+    .container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background: linear-gradient(180deg, rgba(88,166,255,0.3), rgba(31,111,235,0.3));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Work in Progress</h1>
-    <p>We're working hard to bring you something amazing. Please check back soon!</p>
-    <div class="progress-bar">
-      <div class="progress"></div>
+    <h1>🚧 Work in Progress 🚧</h1>
+    <p>Crafting something exciting for you. Stay tuned, and we’ll be live soon.</p>
+    <div class="progress-bar"></div>
+    <div class="footer">
+      Built with ❤️ for devs. Check back soon or follow us on <a href="#">GitHub</a>.
     </div>
-    <button class="notify-btn" onclick="subscribe()">Notify Me</button>
   </div>
-
-  <script>
-    function subscribe() {
-      alert("Thank you for subscribing! We will notify you once we're live.");
-    }
-  </script>
 </body>
 </html>
